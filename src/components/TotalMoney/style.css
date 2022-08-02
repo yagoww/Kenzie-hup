@@ -1,0 +1,31 @@
+.ctn {
+    width: 320px;
+    height: 76px;
+
+    border: 1px #E9ECEF solid;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.ctn-value{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+h3 + h3 {
+    color: #FD377E;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    color: #343A40;
+
+}

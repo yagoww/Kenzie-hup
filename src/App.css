@@ -1,0 +1,78 @@
+header {
+  display: flex;
+  justify-content: space-between;
+
+  height: 88px;
+  align-items: center;
+  background-color: #F8F9FA;
+}
+
+img{
+  margin-left: 150px;
+}
+
+.btn-inicio {
+  margin-right: 150px;
+  width: 64px;
+  height: 40px;
+  background-color: #E9ECEF;
+  border: none;
+  border-radius: 8px;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  margin-top: 34px;
+}
+
+aside {
+  width: 360px;
+  height: 350px;
+
+  border: 1px #E9ECEF solid;
+}
+
+nav {
+  display: flex;
+}
+
+.title-resumo{
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  margin-right: 130px;
+  font-weight: 550;
+}
+
+.btn-filter{
+  width: 69px;
+  height: 40px;
+
+  background-color: #E9ECEF;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  gap: 30px;
+
+  cursor: pointer;
+}
+
+.btn-filter + .btn-filter {
+  margin-left: 15px;
+}
+
+.btn-filter::hover {
+  background-color: #FD377E;
+}
+
