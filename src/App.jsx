@@ -1,6 +1,11 @@
 
-import { useState } from 'react';
+import './reset.css';
 import './App.css';
+
+import logo from "../src/logoKenzie.png"
+import fundo from "./Home/assets/image.png"
+
+import { useState } from 'react';
 
 import Form from "./components/Form";
 import List from "./components/List";
@@ -9,17 +14,17 @@ import TotalMoney from "./components/TotalMoney";
 function App() {
 
   const [listTransactions, setListTransactions] = useState([])
-  const [listFiltradas, setListFiltradas] = useState([]);
+  const [listFilter, setlistFilter] = useState([]);
   const [homePage, setHomePage] = useState(true);
 
   function Filter(type){
     if (type === "todos") {
-      return setListFiltradas(listTransactions);
+      return setlistFilter(listTransactions);
     }
     const filtrados = listTransactions.filter((item) => {
       return item.newType === type;
     });
-    return setListFiltradas(filtrados);
+    return setlistFilter(filtrados);
   }
 
 const  Home = () => {
@@ -28,23 +33,23 @@ const  Home = () => {
 
 return homePage ? 
 (
-  <div>
-            <div>
-            <h1><span>Nu</span> Kenzie</h1>
-            <p>Centralize o controle das suas finanças</p>
-            <label>de forma rápida e segura</label>
-            <button  onClick={() => {
+  <div className='HomePage'>
+      <div className='div-center'>
+        <h1 className='logo-kenzie'><span className='logo-nu'>Nu</span> Kenzie</h1>
+          <p className='title-login'>Centralize o controle das suas finanças</p>
+          <label className='title-login-label'>de forma rápida e segura</label>
+          <button className='submit' onClick={() => {
               Home();
             }}>Iniciar</button>
-            </div>
-            <div>
-                {/* <img src="" alt="" /> */}
-            </div>
-        </div>
+      </div>
+        <div>
+          <img  className='fundo' src={fundo} alt="fundo" />
+          </div>
+  </div>
 ) : (
-  <>
+  <section className='logado'>
   <header>
-    <img src="./public/logo_kenzie.png" alt="logo"  />
+  <img className='logo' src={logo} alt="logoK" />
     <button className='btn-inicio' onClick={setHomePage}>Inicio</button>
   </header>
   <main>
@@ -52,15 +57,15 @@ return homePage ?
       <Form
         listTransactions={listTransactions}
         setListTransactions={setListTransactions}
-        listFiltradas={listFiltradas}
-        setListFiltradas={setListFiltradas}
+        listFilter={listFilter}
+        setlistFilter={setlistFilter}
       />
       <TotalMoney listTransactions={listTransactions} />
     </aside>
-    <section>
+    <section className='ctn-resumo'>
       <nav>
         <h2 className='title-resumo'>Resumo financeiro</h2>
-        <div>
+        <div className='div-filter'>
           <button className='btn-filter' onClick={() => Filter("todos")}>
             Todas
           </button>
@@ -74,10 +79,11 @@ return homePage ?
           </button>
         </div>
       </nav>
-      <List listFiltradas={listFiltradas} />
+      <List listFilter={listFilter} listTransactions={listTransactions}
+        setListTransactions={setListTransactions}/>
     </section>
   </main>
-</>
+</section>
 );
 }
 

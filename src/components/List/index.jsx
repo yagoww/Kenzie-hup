@@ -1,13 +1,12 @@
 import Card from "../Card";
 
-function List({listFiltradas}){
-
-    
+function List({listFilter, listTransactions, setListTransactions}){
 
     return (
         <ul>
-            {listFiltradas.map((transaction, index) => (
-            <Card transaction={transaction} key={transaction.newDescription} />
+            {listTransactions.map((transaction, index) => (
+            <Card transaction={transaction} key={transaction.newDescription} listTransactions={listTransactions}
+            setListTransactions={setListTransactions}/>
             ))}
         </ul>
     );

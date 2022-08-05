@@ -2,24 +2,29 @@ import './style.css';
 
 import { useState } from "react";
 
-function Form ({listTransactions, setListTransactions,listFiltradas,setListFiltradas}){
+function Form ({listTransactions, setListTransactions,listFilter,setlistFilter}){
     
-    const [newValue, setNewValue] = useState(0);
     const [newDescription, setNewDescription] = useState("");
-    const [newType, setnewType] = useState("entraga");
+    const [newValue, setNewValue] = useState(0);
+    const [newType, setnewType] = useState("entrada");
 
-    function handleForm(){
-        const transation = {
+    function handleForm(event){
+        event.preventDefault() 
+         const handle = {
             newValue: Number(newValue),
             newDescription, 
             newType
         };
 
-        if(newDescription !== "" && newDescription !== " " && newValue !==0){
-            setListTransactions([transation, ...listTransactions]);
-            setListFiltradas([transation, ...listFiltradas]);
-        } else {
-            alert("Insira uma descrição ou valor.")
+        
+
+        if (handle.newDescription === ""){
+            alert("Insira uma descrição.")
+        } else if (handle.newValue === 0) {
+            alert("Insira um valor.")
+        } else{
+            setListTransactions([handle, ...listTransactions]);
+            setlistFilter([handle, ...listFilter]);
         }
     }
 
@@ -33,7 +38,7 @@ function Form ({listTransactions, setListTransactions,listFiltradas,setListFiltr
                 value={newDescription}
                 onChange={(event) => setNewDescription(event.target.value)}
             />
-            <h4 className="title-ex">Ex: compra de roupa</h4>
+            <h4 className="title-ex">Ex: Compra de roupas</h4>
 
             <div className="ctn-valor-tipo">
                 <div>
@@ -51,11 +56,11 @@ function Form ({listTransactions, setListTransactions,listFiltradas,setListFiltr
                         onChange={(event) => setnewType(event.target.value)}
                         >
                         <option className="title-op" value="entrada">Entrada</option>
-                        <option className="title-op" value="saida">Saída</option>
+                        <option className="title-op" value="saida">Despesa</option>
                     </select>
                 </div>
             </div>
-            <button className="btn-insere" onClick={() => handleForm()}>Inserir valor</button>
+            <button className="btn-insere" type='submit' onClick={handleForm}>Inserir valor</button>
         </form>
     )
 

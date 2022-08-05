@@ -3,8 +3,12 @@
     height: 76px;
 
     border: 1px #E9ECEF solid;
-    margin-top: 70px;
+    margin-top: 44px;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .ctn-value{
@@ -27,5 +31,6 @@ p {
     font-weight: 400;
     font-family: 'Nunito', sans-serif;
     color: #343A40;
+    margin-top: 10px;
 
 }
