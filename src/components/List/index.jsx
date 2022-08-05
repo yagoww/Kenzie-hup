@@ -5,7 +5,9 @@ function List({listFilter, listTransactions, setListTransactions}){
     return (
         <ul>
             {listTransactions.map((transaction, index) => (
-            <Card transaction={transaction} key={transaction.newDescription} listTransactions={listTransactions}
+            <Card transaction={transaction} 
+            key={transaction.newDescription} 
+            listTransactions={listTransactions}
             setListTransactions={setListTransactions}/>
             ))}
         </ul>

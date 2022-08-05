@@ -21,10 +21,10 @@ function App() {
     if (type === "todos") {
       return setlistFilter(listTransactions);
     }
-    const filtrados = listTransactions.filter((item) => {
-      return item.newType === type;
+    const FilterNew = listTransactions.filter((item) => {
+      return item.newType === item.type;
     });
-    return setlistFilter(filtrados);
+    return setlistFilter(FilterNew);
   }
 
 const  Home = () => {
