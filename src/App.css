@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 
-.HomePage{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000
+.HomePage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
 }
 
 .logado {
@@ -14,25 +14,25 @@
   height: 100%;
 }
 
-.div-center{
+.div-center {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   margin-left: 50px;
 }
 
-.logo-kenzie{
-  font-family: 'Nunito', sans-serif;
+.logo-kenzie {
+  font-family: "Nunito", sans-serif;
   color: #ffffff;
   font-size: 30px;
   margin: 0px;
 }
 
-.logo-nu{
-  font-family: 'Nunito', sans-serif;
+.logo-nu {
+  font-family: "Nunito", sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #FD377E;
+  color: #fd377e;
 }
 
 .fundo {
@@ -41,16 +41,16 @@
 }
 
 .title-login {
-    width: 45%;
-    font-weight: 800;
-    font-size: 28px;
-    color: #ffffff;
-    margin-bottom: 30px;
-    margin-top: 30px;
+  width: 45%;
+  font-weight: 800;
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .title-login-label {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 200;
   font-size: 16px;
   line-height: 26px;
@@ -58,11 +58,11 @@
   margin-bottom: 28px;
 }
 
-.submit{
+.submit {
   width: 200px;
   height: 50px;
 
-  background-color: #E064CC;
+  background-color: #e064cc;
   color: #ffffff;
 
   font-size: 16px;
@@ -74,15 +74,13 @@
   cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover {
   transition: 0.5s;
   background-color: #954287;
   color: #ffffff;
 }
 
-
 /* !-----------------------USUARIO LOGADO-------------------------- */
-
 
 .logado {
   margin: 0;
@@ -96,24 +94,23 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
 }
 
-
-.logo{
+.logo {
   margin-left: 15px;
 }
 
 .btn-inicio {
   width: 64px;
   height: 40px;
-  background-color: #E9ECEF;
+  background-color: #e9ecef;
   margin-right: 15px;
   border: none;
   border-radius: 8px;
 
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -134,10 +131,10 @@ aside {
 
   margin-right: 30px;
 
-  border: 1px #E9ECEF solid;
+  border: 1px #e9ecef solid;
 }
 
-.ctn-resumo{
+.ctn-resumo {
   margin: 0;
 }
 
@@ -147,91 +144,61 @@ nav {
   margin-bottom: 30px;
 }
 
-.div-filter{
+.div-filter {
   display: flex;
 }
 
-.title-resumo{
-  font-family: 'Nunito', sans-serif;
+.title-resumo {
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   margin-right: 30px;
   font-weight: 550;
 }
 
-.btn-filter{
-  width: 69px;
-  height: 40px;
-
-  background-color: #E9ECEF;
-
-  border: none;
-  border-radius: 8px;
-
-  font-family: 'Nunito', sans-serif;
-  font-weight: 200;
-  font-size: 12px;
-  gap: 30px;
-
-  cursor: pointer;
-}
-
-
-.btn-filter:hover{
-  background-color: #FD377E
-}
-
-
-.btn-filter + .btn-filter {
-  margin-left: 15px;
-}
-
-
 section {
   margin-left: 30px;
 }
 
-
 /*! ------------------------------- */
 
-
-@media screen and (min-width: 996px){
-  .HomePage{
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
+@media screen and (min-width: 996px) {
+  .HomePage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .div-center{
+  .div-center {
     width: 40%;
     margin-left: 200px;
   }
 
-  .logo-kenzie{
-      font-size: 30px;
-      margin: 0;
+  .logo-kenzie {
+    font-size: 30px;
+    margin: 0;
   }
 
-  label{
-      font-size: 14px;
+  label {
+    font-size: 14px;
   }
 
-  p{
-      font-size: 30px;
+  p {
+    font-size: 30px;
   }
 
-  .submit{
-      width: 30%;
-      height: 50px;
-      font-size: 20px;
+  .submit {
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
   }
 
   header {
     height: 88px;
   }
-  .logo{
+  .logo {
     margin-left: 19%;
     position: inherit;
   }
@@ -241,7 +208,7 @@ section {
     position: inherit;
   }
 
-  .title-resumo{
+  .title-resumo {
     margin-right: 150px;
   }
 
@@ -249,5 +216,4 @@ section {
     margin-right: 260px;
     margin-left: 250px;
   }
-
 }

@@ -1,0 +1,46 @@
+nav {
+  width: 100%;
+}
+
+.title-resumo {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin-right: 30px;
+  font-weight: 550;
+}
+
+.div-filter {
+  display: flex;
+}
+
+.btn-filter {
+  width: 69px;
+  height: 40px;
+
+  background-color: #e9ecef;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  gap: 30px;
+
+  cursor: pointer;
+}
+
+.btn-filter:hover {
+  background-color: #fd377e;
+}
+
+.btn-filter + .btn-filter {
+  margin-left: 15px;
+}
+
+section {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+}
